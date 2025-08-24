@@ -8,10 +8,9 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to right, #1b4d84, #3a7bd5);
-  color: white;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Header */
@@ -33,7 +32,7 @@ body {
   color: white;
 }
 
-/* Overlay Navigation (Slide from Right) */
+/* Overlay Navigation */
 .overlay {
   height: 100%;
   width: 0;
@@ -75,78 +74,83 @@ body {
   color: white;
 }
 
-#signUpButton a{
-  text-decoration: none;
-  color:  white;
-}
-
 /* Main Content */
 .main-content {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
- : center;
+  justify-content: start;
   padding: 40px 20px;
+  width: 100%;
 }
 
-.main-content h1,
 .main-content h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  text-align: center;
+  color: white;
 }
 
 .main-content p {
   font-size: 1.2rem;
   max-width: 600px;
-}
-
-/* Signup & Login Containers */
-.signup-container,
-.login-container {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 30px;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 400px;
   text-align: center;
-}
-
-.signup-form,
-.login-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.signup-form label,
-.login-form label {
-  margin: 10px 0 5px;
-  font-weight: bold;
-  text-align: left;
-}
-
-.signup-form input,
-.login-form input {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: none;
-  border-radius: 5px;
-}
-
-.signup-form button,
-.login-form button {
-  padding: 10px;
-  background-color: #1b4d84;
   color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  margin-bottom: 20px;
 }
 
-.signup-form button:hover,
-.login-form button:hover {
-  background-color: #3a7bd5;
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.dropbtn {
+  background-color: #333;
+  color: white;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 350px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1;
+  padding: 5px 0;
+  margin: 2px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 8%);
+}
+
+.dropdown-content p {
+  margin: 0;
+  padding: 10px 14px;
+  color: #3a7bd5
+}
+
+.dropdown-content p a {
+  color: black;
+  text-decoration: underline;
+}
+
+#arrow {
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+
+.arrow-rotate {
+  transform: rotate(180deg);
 }
 
 /* Footer */
@@ -155,11 +159,11 @@ body {
   text-align: center;
   padding: 10px;
   font-size: 14px;
+  width: 100%;
 }
 
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
-  .main-content h1,
   .main-content h2 {
     font-size: 2rem;
   }
@@ -178,8 +182,12 @@ body {
     left: 20px;
   }
 
-  .signup-container,
-  .login-container {
-    padding: 20px;
+  .dropbtn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .dropdown-content {
+    min-width: 180px;
   }
 }
