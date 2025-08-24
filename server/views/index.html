@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivaji Maharaj Youth HomePage</title>
+  <link rel="stylesheet" href="/static/pphome.css" />
+</head>
+
+<body>
+
+  <!-- Slide-in Navigation Menu -->
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="/index">Home</a>
+      <a href="#" id="events" style="display:none;">Events</a>
+      <a href="/contactus">Contact Us</a>
+      <a id="loginBtn" href="/pplogin">Login</a>
+      <a id="dashboardLink" href="/ppdashboard" style="display:none;">Dashboard</a>
+      <a id="paymentsLink" href="/payments">Payments</a>
+      <a id="logoutBtn" href="javascript:void(0)" style="display:none;">Logout</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="/static/logo4.png" alt="Logo" />
+    </div>
+    <span class="menu-icon" onclick="openNav()">&#9776;</span>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <h2>SHIVAJI MAHARAJ YOUTH ASSOCIATION <br> GUGULOTHU THANDA</h2>
+    <p><br>Youth is the stage of life between childhood and adulthood. It’s a time of growth, learning, and discovery,
+      where young
+      people explore their identities, develop skills, and form lasting relationships.<br>Youth often brings energy,
+      curiosity, and the drive to shape the future. It's a period full of possibilities and challenges, laying the
+      foundation for adulthood.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Genpact & NGO Partnership - Codechain Devs</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  </script>
+  <script src="/static/scriptFiles/auth.js"></script>
+</body>
+
+</html>

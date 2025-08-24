@@ -1,0 +1,184 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #1b4d84, #3a7bd5);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #1b4d84;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Overlay Navigation (Slide from Right) */
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+  }
+  #signUpButton a{
+    text-decoration: none;
+    color:  white;
+  }
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 60px;
+    color: white;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   : center;
+    padding: 40px 20px;
+  }
+  
+  .main-content h1,
+  .main-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .main-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+  }
+  
+  /* Signup & Login Containers */
+  .signup-container,
+  .login-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .signup-form,
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signup-form label,
+  .login-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .signup-form input,
+  .login-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .signup-form button,
+  .login-form button {
+    padding: 10px;
+    background-color: #1b4d84;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .signup-form button:hover,
+  .login-form button:hover {
+    background-color: #3a7bd5;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 768px) {
+    .main-content h1,
+    .main-content h2 {
+      font-size: 2rem;
+    }
+  
+    .main-content p {
+      font-size: 1rem;
+    }
+  
+    .overlay a {
+      font-size: 28px;
+    }
+  
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      left: 20px;
+    }
+  
+    .signup-container,
+    .login-container {
+      padding: 20px;
+    }
+  }
+  
