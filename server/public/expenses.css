@@ -1,0 +1,146 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f4f7fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  background: #0a6ed1;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo img {
+  height: 40px;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Navigation Overlay */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgba(10, 110, 209, 0.95);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay-content a {
+  padding: 12px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay-content a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  font-size: 40px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px;
+}
+
+.table-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0a6ed1;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+thead {
+  background: #0a6ed1;
+  color: #fff;
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+}
+
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background: #f1f7ff;
+}
+
+tbody a {
+  color: #0a6ed1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+tbody a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background: #0a6ed1;
+  color: white;
+  padding: 12px;
+  margin-top: 30px;
+  font-size: 14px;
+}

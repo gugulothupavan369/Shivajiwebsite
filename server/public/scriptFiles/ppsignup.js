@@ -1,5 +1,5 @@
 // ppsignup.js
-console.log("this is js file");
+// console.log("this is js file");
 
 
 document.addEventListener("DOMContentLoaded", () => {

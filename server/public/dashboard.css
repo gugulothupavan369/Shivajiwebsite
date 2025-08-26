@@ -140,7 +140,7 @@ body {
 
 .dropdown-content p a {
   color: black;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 #arrow {
@@ -148,8 +148,16 @@ body {
   margin-left: 5px;
   transition: transform 0.3s;
 }
+#arrow2 {
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
 
 .arrow-rotate {
+  transform: rotate(180deg);
+}
+.arrow-rotate2 {
   transform: rotate(180deg);
 }
 

@@ -12,7 +12,10 @@ const expenseSchema = new mongoose.Schema(
     purpose: { type: String, required: true },
     amount: { type: Number, required: true },
     paidBy: { type: String, required: true },
-    billUrl: { type: String }, // File path or URL to uploaded bill
+
+    // For uploaded bill
+    billFileId: { type: String }, // Appwrite file ID
+    billUrl: { type: String },    // Public Appwrite file URL
   },
   { timestamps: true }
 );

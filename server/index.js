@@ -7,10 +7,12 @@ import { fileURLToPath } from "url";
 import dotenv from "dotenv";
 import authRoutes from "./routers/auth.routers.js";
 import { requireAuth } from "./middlewares/auth.middlewares.js";
+import expensesRoutes from "./routers/expense.routers.js";
 
 dotenv.config();
 
 const app = express();
+app.use(express.json());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -31,7 +33,7 @@ mongoose
   });
 
 // --- Middlewares ---
-app.use(express.json());
+
 app.use(cookieParser());
 
 // Serve static files (CSS, JS, images etc.)
@@ -39,6 +41,9 @@ app.use("/static", express.static(path.join(__dirname, "public")));
 
 // Auth API routes
 app.use("/api/auth", authRoutes);
+
+
+app.use("/api/expenses", expensesRoutes);
 
 // Public login page
 app.get("/pplogin", (req, res) => {
@@ -52,6 +57,9 @@ app.get("/ppsignup", (req, res) => {
 app.get("/index", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "index.html"));
 });
+app.get("/expenses", requireAuth, (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "expenses.html"));
+});
 
 // Protected page route
 app.get("/ppdashboard", requireAuth, (req, res) => {
@@ -59,6 +67,9 @@ app.get("/ppdashboard", requireAuth, (req, res) => {
 });
 app.get("/contactus", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "contactus.html"));
+});
+app.get("/survey",requireAuth, (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "survey.html"));
 });
 
 // Example protected API (JSON)

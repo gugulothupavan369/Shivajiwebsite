@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard</title>
+  <title>Shivaji Maharaj Youth Dashboard</title>
   <link rel="stylesheet" href="/static/dashboard.css" />
 
 </head>
@@ -20,7 +20,8 @@
       <a href="/contactus">Contact Us</a>
       <a id="loginBtn" href="/pplogin">Login</a>
       <a id="dashboardLink" href="/ppdashboard" style="display:none;">Dashboard</a>
-      <a id="paymentsLink" href="#">Payments</a>
+      <a id="paymentsLink" href="/payments">Payments</a>
+      <a id="surveyForm" href="/survey" style="display:none;">Survey Form</a>
       <a id="logoutBtn" href="javascript:void(0)" style="display:none;">Logout</a>
     </div>
   </div>
@@ -42,18 +43,26 @@
     <div class="dropdown">
       <button class="dropbtn" onclick="toggleDropdown()">Events <span id="arrow">&#9662;</span></button>
       <div class="dropdown-content" id="eventsDropdown">
-        <p>2025 - <a href="#">Click Here</a></p>
-        <p>2024 - <a href="#">Click Here</a></p>
-        <p>2023 - <a href="#">Click Here</a></p>
-        <p>2022 - <a href="#">Click Here</a></p>
-        <p>2021 - <a href="#">Click Here</a></p>
+        <p>Ganesh Chaturthi 2025 Supporters - <a href="#">Click Here</a></p>
+        <p>Ganesh Chaturthi 2024 Supporters - <a href="#">Click Here</a></p>
+        <p>Ganesh Chaturthi 2023 Supporters - <a href="#">Click Here</a></p>
+        <p>Ganesh Chaturthi 2022 Supporters - <a href="#">Click Here</a></p>
+        <p>Ganesh Chaturthi 2021 Supporters - <a href="#">Click Here</a></p>
+      </div>
+       <button class="dropbtn" onclick="toggleDropdownExpense()">Expenses <span id="arrow2">&#9662;</span></button>
+      <div class="dropdown-content" id="eventsDropdownExpense">
+        <p>Ganesh Chaturthi 2025 Expenses - <a href="/expenses?year=2025">Click Here</a></p>
+        <p>Ganesh Chaturthi 2024 Expenses - <a href="/expenses?year=2024">Click Here</a></p>
+        <p>Ganesh Chaturthi 2023 Expenses - <a href="/expenses?year=2023">Click Here</a></p>
+        <p>Ganesh Chaturthi 2022 Expenses - <a href="/expenses?year=2022">Click Here</a></p>
+        <p>Ganesh Chaturthi 2021 Expenses - <a href="/expenses?year=2021">Click Here</a></p>
       </div>
     </div>
   </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Genpact & NGO Partnership - Codechain Devs</p>
+    <p>&copy; All Rights reserved by GUGULOTH PAVAN KALYAN - 2024</p>
   </footer>
 
   <!-- Scripts -->
@@ -67,9 +76,14 @@
     }
   </script>
   <script>
-    function toggleDropdown() {
+    const arrow2 = document.getElementById("arrow2");
+     const arrow = document.getElementById("arrow");
+     const dropdown2 = document.getElementById("eventsDropdownExpense");
       const dropdown = document.getElementById("eventsDropdown");
-      const arrow = document.getElementById("arrow");
+
+    function toggleDropdown() {
+      arrow2.classList.remove("arrow-rotate2");
+      dropdown2.style.display = "none";
 
       if (dropdown.style.display === "block") {
         dropdown.style.display = "none";
@@ -77,6 +91,19 @@
       } else {
         dropdown.style.display = "block";
         arrow.classList.add("arrow-rotate");
+      }
+    }
+    function toggleDropdownExpense() {
+       arrow.classList.remove("arrow-rotate");
+      dropdown.style.display = "none";
+
+      if (dropdown2.style.display === "block") {
+        dropdown2.style.display = "none";
+        arrow2.classList.remove("arrow-rotate2");
+       
+      } else {
+        dropdown2.style.display = "block";
+        arrow2.classList.add("arrow-rotate2");
       }
     }
   </script>

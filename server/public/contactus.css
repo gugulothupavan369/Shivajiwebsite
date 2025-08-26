@@ -1,147 +1,238 @@
 /* Reset and base styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to right, #1b4d84, #3a7bd5);
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Header */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1b4d84;
-  }
-  
-  .logo img {
-    height: 50px;
-  }
-  
-  .menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-  }
-  
-  /* Overlay Navigation */
-  .overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    right: 0;
-    background-color: rgba(0,0,0,0.95);
-    overflow-x: hidden;
-    transition: 0.5s;
-  }
-  
-  .overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-  }
-  
-  .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    left: 30px;
-    font-size: 60px;
-    color: white;
-  }
-  
-  /* Main Content */
-  .main-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px 20px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #1b4d84, #3a7bd5);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b4d84;
+  padding: 12px 20px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Overlay Navigation */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.95);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 32px;
+  color: #bbb;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, 
+.overlay a:focus {
+  color: #fff;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 60px;
+  color: white;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.main-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Contact Info Card */
+.contact {
+  max-width: 600px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+  text-align: left;
+}
+
+.contact p {
+  font-size: 18px;
+  margin: 12px 0;
+  line-height: 1.5;
+}
+
+.contact strong {
+  color: #ffd369;
+}
+
+.contact a {
+  color: #ffecb3;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form (optional if you add inputs) */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #1b4d84;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #3a7bd5;
+}
+
+/* Footer */
+.footer {
+  background-color: rgba(255, 255, 255, 0.15);
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+/* Contact Info Card */
+.contact {
+  max-width: 600px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Each detail box */
+.contact .info-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s, background 0.3s;
+}
+
+.contact .info-box:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.contact .info-box strong {
+  display: block;
+  font-size: 16px;
+  color: #ffd369;
+  margin-bottom: 6px;
+}
+
+.contact .info-box p,
+.contact .info-box a {
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.contact .info-box a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
   .main-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
   }
-  
-  .contact max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+
+  .overlay a {
+    font-size: 26px;
   }
-  
-  .contact-form label {
-    font-weight: bold;
-    text-align: left;
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    left: 20px;
   }
-  
-  .contact-form input,
-  .contact-form textarea {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+
+  .contact {
+    padding: 18px;
   }
-  
-  .contact-form button {
-    padding: 10px;
-    background-color: #1b4d84;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .contact-form button:hover {
-    background-color: #3a7bd5;
-  }
-  
-  /* Footer */
-  .footer {
-    background-color: rgba(255, 255, 255, 0.5);
-    text-align: center;
-    padding: 10px;
-    font-size: 14px;
-  }
-  
-  /* Responsive Adjustments */
-  @media screen and (max-width: 768px) {
-    .main-content h2 {
-      font-size: 2rem;
-    }
-  
-    .overlay a {
-      font-size: 28px;
-    }
-  
-    .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      left: 20px;
-    }
-  }
-  
+}

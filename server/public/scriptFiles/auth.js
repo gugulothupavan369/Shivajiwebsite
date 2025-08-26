@@ -1,5 +1,5 @@
 // public/js/auth.js
-console.log("this is auth");
+// console.log("this is auth");
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
@@ -13,23 +13,30 @@ document.addEventListener("DOMContentLoaded", async () => {
     const loginBtn = document.getElementById("loginBtn");
     const dashboardLink = document.getElementById("dashboardLink");
     const logoutBtn = document.getElementById("logoutBtn");
+    const surveyForm = document.getElementById("surveyForm");
     const events = document.getElementById("events");
     const welcomeText = document.getElementById("welcomeText");
 
     if (data.user) {
-      if (welcomeText)
-        welcomeText.textContent = `Welcome, ${data.user.fullname}! 🎉`;
+      if (welcomeText){
+        let name = data.user.fullname;
+        name = name.charAt(0).toUpperCase()+name.slice(1);
+          welcomeText.textContent = `Welcome, ${name}! 🎉`;
+      }
+        
       // ✅ user logged in → show dashboard, payments, logout
       if (loginBtn) loginBtn.style.display = "none";
       if (dashboardLink) dashboardLink.style.display = "inline-block";
       if (logoutBtn) logoutBtn.style.display = "inline-block";
       if (events) events.style.display = "inline-block";
+      if (surveyForm) surveyForm.style.display = "inline-block";
     } else {
       // ❌ not logged in → show login, signup
       if (loginBtn) loginBtn.style.display = "inline-block";
       if (dashboardLink) dashboardLink.style.display = "none";
       if (logoutBtn) logoutBtn.style.display = "none";
       if (events) events.style.display = "none";
+      if (surveyForm) surveyForm.style.display = "none";
     }
 
     // logout action

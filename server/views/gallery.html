@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - Codechain Devs</title>
+  <link rel="stylesheet" href="../Static/pphome.css" />
+  <style>
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .mySlides img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 50%;
+  user-select: none;
+  transform: translateY(-50%);
+  z-index: 100;
+  }
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.9);
+}
+
+
+.prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+.text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    .dot-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 4px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+      background-color: #fff;
+    }
+
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @media screen and (max-width: 600px) {
+      .prev, .next, .text {
+        font-size: 12px;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Slide-in Navigation Menu -->
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="./index.html">Home</a>
+      <a href="#">Members</a>
+      <a href="./pplogin.html">Login</a>
+      <a href="#">Payments</a>
+      <a href="./gallery.html">Gallery</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+        <img src="https://ui5.sap.com/1.138.1/resources/sap/ui/documentation/sdk/images/sap-ui5-logo.svg" alt="Logo" />
+    </div>
+    <span class="menu-icon" onclick="openNav()">&#9776;</span>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <h1>Gallery</h1>
+    <p>Swipe through our moments from Genpact & NGO Partnership</p>
+
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="https://www.w3schools.com/w3images/nature.jpg">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="https://www.w3schools.com/w3images/underwater.jpg">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="https://www.w3schools.com/w3images/nature.jpg">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="https://www.w3schools.com/w3images/underwater.jpg">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="https://www.w3schools.com/w3images/nature.jpg">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="https://www.w3schools.com/w3images/underwater.jpg">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="https://www.w3schools.com/w3images/nature.jpg">
+        <div class="text"></div>
+      </div>
+
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span> 
+      <span class="dot" onclick="currentSlide(5)"></span> 
+      <span class="dot" onclick="currentSlide(6)"></span> 
+      <span class="dot" onclick="currentSlide(7)"></span> 
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Genpact & NGO Partnership - Codechain Devs</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+  
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+  
+    function plusSlides(n) {
+      slideIndex += n - 1;
+      showSlides();
+    }
+  
+    function currentSlide(n) {
+      slideIndex = n - 1;
+      showSlides();
+    }
+  </script>
+  
+</body>
+</html>

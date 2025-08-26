@@ -1,5 +1,5 @@
 // pplogin.js
-console.log("Login JS loaded");
+// console.log("Login JS loaded");
 
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.querySelector(".login-form");
