@@ -1,29 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us</title>
-  <link rel="stylesheet" href="/static/contactus.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/contactus.css">
+    <title>Developer Profile</title>
 </head>
-
 <body>
-
-  <!-- Slide-in Navigation Menu -->
-  <div id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div class="overlay-content">
-      <a href="/index">Home</a>
-      <a href="#" id="events" style="display:none;">Events</a>
-      <a href="/contactus">Contact Us</a>
-      <a id="loginBtn" href="/pplogin">Login</a>
-      <a id="dashboardLink" href="/ppdashboard" style="display:none;">Dashboard</a>
-      <a id="paymentsLink" href="/payments">Payments</a>
-      <a id="surveyForm" href="/survey" style="display:none;">Survey Form</a>
-      <a id="logoutBtn" href="javascript:void(0)" style="display:none;">Logout</a>
-    </div>
-  </div>
 
   <!-- Header -->
   <header class="header">
@@ -33,33 +16,42 @@
     <span class="menu-icon" onclick="openNav()">&#9776;</span>
   </header>
 
-  <!-- Main Content -->
-  <main class="main-content">
-    <h2>Contact the Developer</h2>
-    <div class="contact">
-  <div class="info-box">
-    <strong>📞 Phone</strong>
-    <p>+91 9876543210</p>
+  <!-- Navigation Overlay -->
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="/index">Home</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/members">Members Profile</a>
+      <a id="loginBtn" href="/pplogin">Login</a>
+      <a id="dashboardLink" href="/ppdashboard" style="display:none;">Dashboard</a>
+      <a id="paymentsLink" href="https://spf.bio/XcTx5">Payments</a>
+      <a href="/contactus">Contact Us</a>
+      <a id="surveyForm" href="/survey" style="display:none;">Expense Form</a><br>
+      <a id="logoutBtn" href="javascript:void(0)" style="display:none;">Logout</a>
+    </div>
   </div>
-  <div class="info-box">
-    <strong>📧 Email</strong>
-    <p><a href="mailto:example@email.com">example@email.com</a></p>
-  </div>
-  <div class="info-box">
-    <strong>🏠 Address</strong>
-    <p>123 Street, City, India</p>
-  </div>
-  <div class="info-box">
-    <strong>🌐 Social</strong>
-    <p><a href="#">Facebook</a> | <a href="#">Instagram</a></p>
-  </div>
-</div>
 
-  </main>
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="container">
+        <div class="profile">
+            <img src="/static/images/PAVAN7.jpeg" alt="Profile Photo" class="profile-image">
+            <h1>Guguloth Pavan Kalyan</h1>
+            <p class="position"> Developer of Website</p>
+            <p class="location">Contact us for any information through the social media accounts below</p>
+            <div style="margin-top: 15px;">
+              <a href="https://www.instagram.com/pavankalyan_officiall/" class="fa fa-instagram" target="_blank" rel="noopener noreferrer"></a>
+              <a href="https://wa.me/919949752695/" class="fa fa-whatsapp" target="_blank"></a>
+              <a href="mailto:gugulothupavan3699@gmail.com" class="fa fa-envelope"></a>
+            </div>
+        </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; All Rights reserved by GUGULOTH PAVAN KALYAN - 2024</p>
+    <p>&copy; All Rights Reserved by GUGULOTH PAVAN KALYAN - 2024</p>
   </footer>
 
   <!-- JavaScript -->
@@ -72,6 +64,6 @@
     }
   </script>
   <script src="/static/scriptFiles/auth.js"></script>
-</body>
 
+</body>
 </html>

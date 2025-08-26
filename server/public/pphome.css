@@ -7,7 +7,13 @@
   }
   body {
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to right, #1b4d84, #3a7bd5);
+    
+    background-image: url('/static/images/shivaji-background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
     min-height: 100vh;
     display: flex;

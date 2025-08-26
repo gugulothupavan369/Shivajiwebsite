@@ -1,238 +1,168 @@
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Body and Background */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-image: url('/static/images/shivaji-background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #1b4d84, #3a7bd5);
-  color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* Main content wrapper to center container */
+.main-content {
+    flex: 1; /* takes remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* Header */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1b4d84;
-  padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b4d84;
+    padding: 12px 20px;
 }
 
 .logo img {
-  height: 50px;
+    height: 50px;
+    max-width: 100%;
 }
 
 .menu-icon {
-  font-size: 30px;
-  cursor: pointer;
-  color: white;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
 }
 
 /* Overlay Navigation */
 .overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  right: 0;
-  background-color: rgba(0,0,0,0.95);
-  overflow-x: hidden;
-  transition: 0.5s;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.95);
+    overflow-x: hidden;
+    transition: 0.5s;
 }
 
 .overlay-content {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
 }
 
 .overlay a {
-  padding: 10px;
-  text-decoration: none;
-  font-size: 32px;
-  color: #bbb;
-  display: block;
-  transition: 0.3s;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 32px;
+    color: #bbb;
+    display: block;
+    transition: 0.3s;
 }
 
 .overlay a:hover, 
 .overlay a:focus {
-  color: #fff;
+    color: #fff;
 }
 
 .overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  font-size: 60px;
-  color: white;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 60px;
+    color: white;
 }
 
-/* Main Content */
-.main-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px 20px;
+/* Container */
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 90%;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.main-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+/* Profile Image */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular images */
+    padding-bottom: 10px;
+    margin-bottom: -5px;
+    border: 3px solid rgb(255, 255, 255);
+    padding: 4px;
 }
 
-/* Contact Info Card */
-.contact {
-  max-width: 600px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(6px);
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
-  text-align: left;
+h1 {
+    margin: 10px 0;
 }
 
-.contact p {
-  font-size: 18px;
-  margin: 12px 0;
-  line-height: 1.5;
+.position {
+    font-weight: bold;
 }
 
-.contact strong {
-  color: #ffd369;
+/* Social Media Icons */
+.fa {
+    padding: 10px 10px;
+    font-size: 18px;
+    width: -15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
 }
 
-.contact a {
-  color: #ffecb3;
-  text-decoration: none;
+.fa:hover {
+    opacity: 0.7;
 }
 
-.contact a:hover {
-  text-decoration: underline;
-}
-
-/* Contact Form (optional if you add inputs) */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.contact-form label {
-  font-weight: bold;
-  text-align: left;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  outline: none;
-  font-size: 15px;
-}
-
-.contact-form button {
-  padding: 10px;
-  background-color: #1b4d84;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.contact-form button:hover {
-  background-color: #3a7bd5;
-}
+/* Colors for specific platforms */
+.fa-instagram { background: #f40083; color: white; }
+.fa-whatsapp { background: #25D366; color: white; }
+.fa-envelope { background: #cb2027; color: white; }
 
 /* Footer */
-.footer {
-  background-color: rgba(255, 255, 255, 0.15);
-  text-align: center;
-  padding: 12px;
-  font-size: 14px;
-  color: #fff;
-  letter-spacing: 0.5px;
+  .footer {
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
 }
 
-/* Contact Info Card */
-.contact {
-  max-width: 600px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(6px);
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-/* Each detail box */
-.contact .info-box {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 15px 20px;
-  border-radius: 8px;
-  box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
-  transition: transform 0.2s, background 0.3s;
-}
-
-.contact .info-box:hover {
-  transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.contact .info-box strong {
-  display: block;
-  font-size: 16px;
-  color: #ffd369;
-  margin-bottom: 6px;
-}
-
-.contact .info-box p,
-.contact .info-box a {
-  font-size: 15px;
-  color: #fff;
-  text-decoration: none;
-  line-height: 1.4;
-}
-
-.contact .info-box a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-  .main-content h2 {
-    font-size: 2rem;
+  .login-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
   }
 
-  .overlay a {
-    font-size: 26px;
-  }
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .container { width: 60%; padding: 15px; }
+    .profile-image { width: 100px; height: 100px; }
+    .fa { width: 35px; height: 35px; line-height: 35px; font-size: 18px; }
+}
 
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    left: 20px;
-  }
-
-  .contact {
-    padding: 18px;
-  }
+@media (max-width: 600px) {
+    .container { width: 90%; padding: 10px; }
+    .profile-image { width: 80px; height: 80px; }
+    .fa { width: 30px; height: 30px; line-height: 30px; font-size: 16px; }
 }

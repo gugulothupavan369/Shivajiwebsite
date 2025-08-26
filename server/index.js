@@ -65,6 +65,12 @@ app.get("/expenses", requireAuth, (req, res) => {
 app.get("/ppdashboard", requireAuth, (req, res) => {
   res.sendFile(path.join(__dirname, "views", "ppdashboard.html"));
 });
+app.get("/gallery", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "gallery.html"));
+});
+app.get("/members", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "members.html"));
+});
 app.get("/contactus", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "contactus.html"));
 });

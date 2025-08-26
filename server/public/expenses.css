@@ -10,11 +10,18 @@ body {
   background: #f4f7fb;
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden;
+  background-image: url('/static/images/shivaji-background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Header */
 .header {
-  background: #0a6ed1;
+  background: #1b4d84;
   color: white;
   padding: 10px 20px;
   display: flex;
@@ -39,7 +46,7 @@ body {
   z-index: 1000;
   top: 0;
   left: 0;
-  background-color: rgba(10, 110, 209, 0.95);
+  background-color: rgba(0, 0, 0, 0.95);
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -89,7 +96,9 @@ body {
   border-radius: 12px;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 900px;
+  max-width: 100%;
+  overflow-x: auto; /* Horizontal scroll for mobile */
+  -webkit-overflow-scrolling: touch;
 }
 
 .table-container h2 {
@@ -101,24 +110,28 @@ body {
 /* Table Styling */
 table {
   width: 100%;
+  min-width: 900px; /* Prevent collapsing on mobile */
   border-collapse: collapse;
-  overflow-x: auto;
 }
 
 thead {
   background: #0a6ed1;
   color: #fff;
+  position: sticky;
+  top: 0; /* Sticky header */
+  z-index: 2;
 }
 
 thead th {
   padding: 12px;
   text-align: left;
+  white-space: nowrap;
 }
-
 
 tbody td {
   padding: 12px;
   border-bottom: 1px solid #ddd;
+  white-space: nowrap;
 }
 
 tbody tr:hover {
@@ -136,11 +149,56 @@ tbody a:hover {
 }
 
 /* Footer */
-.footer {
+  .footer {
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+  }
+/* .footer {
   text-align: center;
   background: #0a6ed1;
   color: white;
   padding: 12px;
   margin-top: 30px;
   font-size: 14px;
+} */
+
+
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .header {
+    padding: 8px 12px;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+  }
+
+  .table-container {
+    padding: 15px;
+  }
+
+  table {
+    min-width: 700px; /* Slightly smaller for tablet/mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  .table-container {
+    padding: 10px;
+  }
+
+  table {
+    min-width: 600px; /* Smaller for small screens */
+  }
 }

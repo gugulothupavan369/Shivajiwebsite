@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+/* Reset margins and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* Main container styling */
+.main {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(./IMAGES/background2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden; /* Add this line to remove the right side and bottom color */
+}
+.html, body {
+    height: 100%; /* Ensure body and html cover the full viewport */
+    margin: 0; /* Reset margin */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-family: Arial, sans-serif;
+    background-image: url('/static/images/shivaji-background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.row {
+    
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url('/static/images/background2.jpg');
+    background-position: center;
+}
+ 
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #1b4d84;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Overlay Navigation (Slide from Right) */
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+  }
+  #signUpButton a{
+    text-decoration: none;
+    color:  white;
+  }
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 60px;
+    color: white;
+  }
+  
+
+
+/* Navbar styling */
+.navbar {
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+
+.icon {
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo {
+    color: #e56f0f;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px;
+}
+
+.menu {
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+    margin-right: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #ff7200;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover {
+    color: white;
+}
+.content {
+    text-align: center;
+    padding: 120px;
+}
+
+.p {
+    margin-top: 20px;  /* Adjusts space above the paragraph */
+    margin-bottom: 20px;  /* Adjusts space below the paragraph */
+    margin-left: 30px;  /* Adjusts space to the left of the paragraph */
+    margin-right: 30px;  /* Adjusts space to the right of the paragraph */
+    font-family:'Kanit', sans-serif;  /* Added fallback serif font */
+    font-size: 20px;
+    color: white;
+}
+
+.h2 {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif; /* Added fallback cursive font */
+    color: black;
+    font-weight: 400;
+}
+
+
+
+.h1 {
+    padding: 6px;
+    border: 4px dashed;
+    text-align: center;
+    border-color: #ff7200;
+    font-family: "Protest Guerrilla", sans-serif; /* Added fallback cursive font */
+    font-size: 35px;
+    color: rgb(0,  0, 0);
+    background-color: #ddd;
+    background-clip:border-box;
+}
+
+
+/* Hover effect styles for the navbar */
+.hover-section {
+    position: relative;
+    display: inline-block; /* Ensure the dropdown is relative to the link */
+}
+
+
+/* Styles for the first row with 2 profiles */
+.profile-cards-first-row {
+    display: flex;
+    gap: 20px; /* Space between profile cards */
+    justify-content: center; /* Center align the two profiles */
+    margin-bottom: 40px; /* Space below the first row */
+      
+}
+/*Style of image media */
+.profile-card .fa {
+    padding: 10px 10px;
+    font-size: 18px;
+    width: -15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.3;
+}
+
+.fa-instagram {
+    background: #f40083;
+    color: white;
+}
+
+.fa-whatsapp {
+    background: #a4c639;
+    color: white;
+}
+
+.fa-envelope {
+    background: #cb2027;
+    color: white;
+}
+
+/*Styles for the common rows with 3 profiles each */
+.profile-cards-row {
+    display: flex;
+    gap: 20px; /* Space between profile cards */
+    justify-content: space-between; /* Distribute the profiles evenly */
+    margin-bottom: 20px; /* Space below each row */
+}
+
+/* Common styles for profile cards */
+.profile-card {
+    color: #fff;
+    background-color: rgb(255, 255, 225, 0.2); /* Light background color for cards */
+    border: 1px solid rbba (255, 255, 255, 0.5);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    backdrop-filter: blur(30px) ;
+    text-align: center;
+    width: 300px; /* Ensures three profiles fit in a row */
+}  
+
+/* Updated Image styles */
+.profile-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular images */
+    padding-bottom: 10px;
+    margin-bottom: -5px;
+    border: 3px solid white;
+    padding: 4px;
+}
+
+/* Updated Heading styles */
+.profile-card h2 {
+    margin: 10px 5px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    font-family: 'Sitka Display Semibold', serif; /* Added fallback cursive font */ 
+}
+
+/* Updated Paragraph styles */
+.profile-card p {
+    margin: 13px 20;
+    color: #a7aaac;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.profile-card h4 {
+    margin: 13px 20;
+    color:white;
+    font-weight: 400;
+    font-family: "Kanit", sans-serif;
+}
+    
+
+/* Media query for small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+    }
+
+    ul li {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .icon img {
+        width: 80px;
+        height: 160px;
+        top: -30px;
+    }
+
+    .content {
+        padding: 60px;
+    }
+
+    .profile-cards-row, .profile-cards-first-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-card {
+        width: 90%; /* Take up full width */
+    }
+
+}
+
+/* Media query for tablets (portrait and landscape, 768px and up) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .navbar {
+        width: 100%;
+    }
+
+    .menu ul {
+        justify-content: space-around;
+    }
+
+    .icon img {
+        width: 100px;
+        height: 200px;
+    }
+
+    .content {
+        padding: 80px;
+    }
+
+    .profile-cards-row, .profile-cards-first-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-card {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .srch {
+        width: 75%;
+    }
+
+    .btn {
+        width: 75%;
+        margin-top: 10px;
+    }
+}
+
+
+
+/* Media query for desktops (1025px and up) */
+@media only screen and (min-width: 1025px) {
+    .navbar {
+        width: 1200px;
+    }
+
+    .menu ul {
+        justify-content: center;
+    }
+
+    .icon img {
+        width: 120px;
+        height: 240px;
+    }
+
+    .content {
+        padding: 120px;
+    }
+
+    .profile-cards-row, .profile-cards-first-row {
+        justify-content: space-between;
+    }
+
+    .profile-card {
+        width: calc(33.33% - 20px);
+    }
+}
+
+  /* Footer */
+  .footer {
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+  }

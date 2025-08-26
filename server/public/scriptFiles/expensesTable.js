@@ -33,8 +33,8 @@ async function loadExpenses() {
         <td>₹${exp.amount}</td>
         <td>${exp.paidBy}</td>
         <td>${
-          exp.bill
-            ? `<a href="${exp.bill}" target="_blank">View Bill</a>`
+          exp.billUrl
+            ? `<a href="${exp.billUrl}&mode=admin" target="_blank">View Bill</a>`
             : "No Bill"
         }</td>
       `;
